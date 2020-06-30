@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20200605210747177" modeler:modelId="19039" modeler:modelVersion="2" modeler:modelLastUpdated="1591318016887">
+  <process id="GroupReviewProcess" name="GroupReviewProcess" isExecutable="true">
+    <documentation>Test</documentation>
+    <startEvent id="start" name="Start">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[startEvent1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <userTask id="groupReview" name="Group Review" activiti:candidateGroups="1002">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:group-info-name-1002><![CDATA[Compliance_QA]]></modeler:group-info-name-1002>
+        <modeler:group-info-externalid-1002><![CDATA[cn=Compliance_QA,ou=groups,dc=cavierre,dc=com]]></modeler:group-info-externalid-1002>
+        <modeler:activiti-idm-candidate-group><![CDATA[true]]></modeler:activiti-idm-candidate-group>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-41CB86A4-922A-499C-93B4-F073D6FD6A04]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-8E599309-97EE-43F3-AE92-F64BBB4CBCE8" sourceRef="start" targetRef="groupReview">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-8E599309-97EE-43F3-AE92-F64BBB4CBCE8]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="end" name="End">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-50B3FB80-EB61-433B-B0FF-AC5DC1663097]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <sequenceFlow id="sid-BF1121AB-F51A-4E89-BE47-149CF3D29E15" sourceRef="groupReview" targetRef="end">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-BF1121AB-F51A-4E89-BE47-149CF3D29E15]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_GroupReviewProcess">
+    <bpmndi:BPMNPlane bpmnElement="GroupReviewProcess" id="BPMNPlane_GroupReviewProcess">
+      <bpmndi:BPMNShape bpmnElement="start" id="BPMNShape_start">
+        <omgdc:Bounds height="30.0" width="30.0" x="100.0" y="163.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="groupReview" id="BPMNShape_groupReview">
+        <omgdc:Bounds height="80.0" width="100.0" x="175.0" y="138.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end" id="BPMNShape_end">
+        <omgdc:Bounds height="28.0" width="28.0" x="320.0" y="164.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-BF1121AB-F51A-4E89-BE47-149CF3D29E15" id="BPMNEdge_sid-BF1121AB-F51A-4E89-BE47-149CF3D29E15">
+        <omgdi:waypoint x="275.0" y="178.0"/>
+        <omgdi:waypoint x="320.0" y="178.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-8E599309-97EE-43F3-AE92-F64BBB4CBCE8" id="BPMNEdge_sid-8E599309-97EE-43F3-AE92-F64BBB4CBCE8">
+        <omgdi:waypoint x="130.0" y="178.0"/>
+        <omgdi:waypoint x="175.0" y="178.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

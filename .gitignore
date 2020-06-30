@@ -1,0 +1,10 @@
+.git
+.settings/
+.classpath
+.project
+.metadata
+bin/
+tmp/
+target/
+*.tmp
+.classpath
